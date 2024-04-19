@@ -2,19 +2,24 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>   
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
-    <div style="width: 600px; height: 50%; padding: 10px; ">
-        <canvas id="myChart"></canvas>
-        <div style="width: 660px; height: 50%;  padding: 10px;">
-          <canvas id="myChart2"></canvas>
-      </div>
-      <div>
+  <div style="display: flex; justify-content: center;">
+
+  <div style="width: 600px; height: 50%; padding: 10px; ">
+    <canvas id="myChart"></canvas>
+
+    <div style="width: 660px; height: 50%;  padding: 10px;">
+      <canvas id="myChart2"></canvas>
+    </div>
+
+    
+
       <script>
         const ctx = document.getElementById('myChart');
         const ctx2 = document.getElementById('myChart2');
@@ -27,12 +32,12 @@
               data: [22, 24, 27, 23, 20, 18],
               borderWidth: 1
             }
-            ,{
+              , {
               label: 'Temperatura e umidade',
               data: [90, 89, 93, 87, 88, 82],
               borderWidth: 1
             }]
-            
+
           },
           options: {
             scales: {
@@ -44,36 +49,38 @@
         });
 
         new Chart(ctx2, {
-        type: 'line',
-        data: {
+          type: 'line',
+          data: {
             labels: ['12:00', '13:00', '14:00', '15:00', '16:00', '17:00'],
             datasets: [{
-                label: 'Temperatura',
-                data: [30, 29, 28, 25, 22, 23],
-                borderWidth: 1,
-                borderColor: "#FF4500",
-                backgroundColor: "#FF4500"
+              label: 'Temperatura',
+              data: [30, 29, 28, 25, 22, 23],
+              borderWidth: 1,
+              borderColor: "#FF4500",
+              backgroundColor: "#FF4500"
             },
             {
-                label: 'Umidade',
-                data: [80, 82, 80, 85, 80, 83],
-                borderWidth: 1,
-                borderColor: '#FF8C00',
-                backgroundColor: '#FF8C00'
+              label: 'Umidade',
+              data: [80, 82, 80, 85, 80, 83],
+              borderWidth: 1,
+              borderColor: '#FF8C00',
+              backgroundColor: '#FF8C00'
 
             }]
 
-        },
-        options: {
+          },
+          options: {
             scales: {
-                y: {
-                    beginAtZero: true
-                }
+              y: {
+                beginAtZero: true
+              }
             }
-        }
-    });
+          }
+        });
       </script>
-      </div>
+
+    </div>
+
 </body>
 
 </html>
